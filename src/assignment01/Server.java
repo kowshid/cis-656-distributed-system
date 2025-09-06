@@ -16,11 +16,11 @@ public class Server {
             System.out.println("the server is up...");
 
             while (true) {
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("received connection from client: " + clientSocket.getInetAddress());
+                Socket socket = serverSocket.accept();
+                System.out.println("received connection from client: " + socket.getInetAddress());
 
                 String currentTime = new Date().toString();
-                PrintWriter printWriter = new PrintWriter(clientSocket.getOutputStream(), true);
+                PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
                 printWriter.println(currentTime);
             }
         } catch (IOException e) {
