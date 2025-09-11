@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 
-public class Server {
+public class SingleClientServer {
 
     public static void main(String[] args) {
         int port = 9999;
