@@ -11,11 +11,12 @@ public class CallbackRemote extends UnicastRemoteObject implements Callback {
     }
 
     public void notifyMe(String message) {
+
         try {
             String hostname = InetAddress.getLocalHost().getHostName();
             System.out.println("Using Callback " + hostname + ": " + message);
         } catch (Exception e) {
-            System.out.println("Using Callback: " + message);
+            System.out.println("Callback error: " + e.getMessage());
         }
     }
 }

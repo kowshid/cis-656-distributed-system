@@ -29,7 +29,7 @@ public class ClientHandler implements Runnable {
                 if (object instanceof RpcRequest) {
 
                     String result = stringProcessor.process(((RpcRequest) object).getMessage());
-                    if(RpcRequest.EMPTY_STRING.equals(result)) {
+                    if (RpcRequest.EMPTY_STRING.equals(result)) {
                         break;
                     }
 

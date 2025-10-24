@@ -8,9 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Server {
 
     private static final int PORT = 5000;
-
-    private final StringProcessor stringProcessor = StringProcessorImpl.getInstance();
     private static final AtomicInteger CLIENT_COUNTER = new AtomicInteger(0);
+    private final StringProcessor stringProcessor = StringProcessorImpl.getInstance();
 
     public static void main(String[] args) throws IOException {
         new Server().begin();

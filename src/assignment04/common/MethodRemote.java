@@ -11,6 +11,7 @@ public class MethodRemote extends UnicastRemoteObject implements Method {
     }
 
     public String action(String input, String clientHost, Callback callbackObj) {
+
         String result;
 
         if (input.equalsIgnoreCase("time")) {
@@ -22,7 +23,7 @@ public class MethodRemote extends UnicastRemoteObject implements Method {
         try {
             callbackObj.notifyMe(result);
         } catch (Exception e) {
-            System.out.println("Callback error: " + e);
+            System.out.println("RMI error: " + e.getMessage());
         }
 
         return result;
