@@ -8,7 +8,6 @@ This course explores the fundamental principles of distributed systems: systems 
 
 
 ## Text
-
 Distributed Systems - Third edition, Version 3.03\
 Maarten van Steen, Andrew S. Tanenbaum
 
